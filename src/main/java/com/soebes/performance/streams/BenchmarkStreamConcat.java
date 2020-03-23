@@ -45,9 +45,12 @@ public class BenchmarkStreamConcat {
       this.fancyStuffs = Collections.emptyList();
     }
 
+    @Param({"50", "100", "1000", "2000", "5000"})
+    int count;
+
     @Setup(Level.Trial)
     public void setup() {
-      fancyStuffs = IntStream.rangeClosed(1, 50)
+      fancyStuffs = IntStream.rangeClosed(1, count)
         .mapToObj(i -> new FancyStuff(new Element(i + 1), createList(i)))
         .collect(Collectors.toList());
     }

@@ -1,0 +1,547 @@
+performance-concat (master *)$ ~/tools/jdk-11.0.5+10/Contents/Home/bin/java -jar target/performance-concat-1.0-SNAPSHOT.jar 
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/Users/khmarbaise/ws-git-soebes/examples/performance/performance-concat/target/performance-concat-1.0-SNAPSHOT.jar) to field java.io.Console.cs
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist
+# Parameters: (count = 50)
+
+# Run progress: 0.00% complete, ETA 00:40:00
+# Fork: 1 of 3
+# Warmup Iteration   1: 23.083 us/op
+# Warmup Iteration   2: 21.660 us/op
+# Warmup Iteration   3: 21.861 us/op
+Iteration   1: 22.193 us/op
+Iteration   2: 21.882 us/op
+Iteration   3: 23.573 us/op
+Iteration   4: 22.283 us/op
+Iteration   5: 22.408 us/op
+
+# Run progress: 3.33% complete, ETA 00:38:51
+# Fork: 2 of 3
+# Warmup Iteration   1: 22.336 us/op
+# Warmup Iteration   2: 21.537 us/op
+# Warmup Iteration   3: 21.109 us/op
+Iteration   1: 21.053 us/op
+Iteration   2: 20.959 us/op
+Iteration   3: 22.126 us/op
+Iteration   4: 21.354 us/op
+Iteration   5: 21.548 us/op
+
+# Run progress: 6.67% complete, ETA 00:37:31
+# Fork: 3 of 3
+# Warmup Iteration   1: 23.631 us/op
+# Warmup Iteration   2: 21.077 us/op
+# Warmup Iteration   3: 20.828 us/op
+Iteration   1: 22.317 us/op
+Iteration   2: 20.871 us/op
+Iteration   3: 21.193 us/op
+Iteration   4: 20.935 us/op
+Iteration   5: 21.694 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist":
+  21.759 ±(99.9%) 0.797 us/op [Average]
+  (min, avg, max) = (20.871, 21.759, 23.573), stdev = 0.745
+  CI (99.9%): [20.963, 22.556] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist
+# Parameters: (count = 100)
+
+# Run progress: 10.00% complete, ETA 00:36:10
+# Fork: 1 of 3
+# Warmup Iteration   1: 43.458 us/op
+# Warmup Iteration   2: 42.858 us/op
+# Warmup Iteration   3: 42.433 us/op
+Iteration   1: 41.917 us/op
+Iteration   2: 42.031 us/op
+Iteration   3: 42.041 us/op
+Iteration   4: 47.206 us/op
+Iteration   5: 42.691 us/op
+
+# Run progress: 13.33% complete, ETA 00:34:50
+# Fork: 2 of 3
+# Warmup Iteration   1: 44.468 us/op
+# Warmup Iteration   2: 43.285 us/op
+# Warmup Iteration   3: 44.129 us/op
+Iteration   1: 43.302 us/op
+Iteration   2: 43.117 us/op
+Iteration   3: 42.883 us/op
+Iteration   4: 43.100 us/op
+Iteration   5: 43.309 us/op
+
+# Run progress: 16.67% complete, ETA 00:33:30
+# Fork: 3 of 3
+# Warmup Iteration   1: 43.633 us/op
+# Warmup Iteration   2: 44.068 us/op
+# Warmup Iteration   3: 44.550 us/op
+Iteration   1: 42.401 us/op
+Iteration   2: 42.975 us/op
+Iteration   3: 43.310 us/op
+Iteration   4: 44.765 us/op
+Iteration   5: 44.587 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist":
+  43.309 ±(99.9%) 1.449 us/op [Average]
+  (min, avg, max) = (41.917, 43.309, 47.206), stdev = 1.355
+  CI (99.9%): [41.861, 44.758] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist
+# Parameters: (count = 1000)
+
+# Run progress: 20.00% complete, ETA 00:32:09
+# Fork: 1 of 3
+# Warmup Iteration   1: 485.228 us/op
+# Warmup Iteration   2: 482.235 us/op
+# Warmup Iteration   3: 459.862 us/op
+Iteration   1: 453.769 us/op
+Iteration   2: 444.645 us/op
+Iteration   3: 453.681 us/op
+Iteration   4: 458.993 us/op
+Iteration   5: 500.933 us/op
+
+# Run progress: 23.33% complete, ETA 00:30:49
+# Fork: 2 of 3
+# Warmup Iteration   1: 532.216 us/op
+# Warmup Iteration   2: 470.455 us/op
+# Warmup Iteration   3: 452.733 us/op
+Iteration   1: 456.864 us/op
+Iteration   2: 486.505 us/op
+Iteration   3: 436.416 us/op
+Iteration   4: 435.358 us/op
+Iteration   5: 452.838 us/op
+
+# Run progress: 26.67% complete, ETA 00:29:29
+# Fork: 3 of 3
+# Warmup Iteration   1: 472.640 us/op
+# Warmup Iteration   2: 462.068 us/op
+# Warmup Iteration   3: 482.447 us/op
+Iteration   1: 462.068 us/op
+Iteration   2: 511.000 us/op
+Iteration   3: 467.736 us/op
+Iteration   4: 758.461 us/op
+Iteration   5: 701.132 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist":
+  498.693 ±(99.9%) 103.550 us/op [Average]
+  (min, avg, max) = (435.358, 498.693, 758.461), stdev = 96.861
+  CI (99.9%): [395.143, 602.244] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist
+# Parameters: (count = 2000)
+
+# Run progress: 30.00% complete, ETA 00:28:08
+# Fork: 1 of 3
+# Warmup Iteration   1: 1161.830 us/op
+# Warmup Iteration   2: 973.607 us/op
+# Warmup Iteration   3: 1064.895 us/op
+Iteration   1: 1078.417 us/op
+Iteration   2: 1164.602 us/op
+Iteration   3: 1007.129 us/op
+Iteration   4: 997.967 us/op
+Iteration   5: 961.173 us/op
+
+# Run progress: 33.33% complete, ETA 00:26:48
+# Fork: 2 of 3
+# Warmup Iteration   1: 1186.341 us/op
+# Warmup Iteration   2: 986.388 us/op
+# Warmup Iteration   3: 1124.704 us/op
+Iteration   1: 973.634 us/op
+Iteration   2: 957.231 us/op
+Iteration   3: 979.999 us/op
+Iteration   4: 991.501 us/op
+Iteration   5: 1086.943 us/op
+
+# Run progress: 36.67% complete, ETA 00:25:27
+# Fork: 3 of 3
+# Warmup Iteration   1: 947.172 us/op
+# Warmup Iteration   2: 976.682 us/op
+# Warmup Iteration   3: 964.097 us/op
+Iteration   1: 907.205 us/op
+Iteration   2: 1007.435 us/op
+Iteration   3: 892.670 us/op
+Iteration   4: 912.783 us/op
+Iteration   5: 908.552 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist":
+  988.483 ±(99.9%) 80.574 us/op [Average]
+  (min, avg, max) = (892.670, 988.483, 1164.602), stdev = 75.369
+  CI (99.9%): [907.909, 1069.057] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist
+# Parameters: (count = 5000)
+
+# Run progress: 40.00% complete, ETA 00:24:07
+# Fork: 1 of 3
+# Warmup Iteration   1: 3559.014 us/op
+# Warmup Iteration   2: 4078.393 us/op
+# Warmup Iteration   3: 3572.018 us/op
+Iteration   1: 3524.070 us/op
+Iteration   2: 3307.323 us/op
+Iteration   3: 3187.226 us/op
+Iteration   4: 3309.785 us/op
+Iteration   5: 3368.866 us/op
+
+# Run progress: 43.33% complete, ETA 00:22:47
+# Fork: 2 of 3
+# Warmup Iteration   1: 3888.665 us/op
+# Warmup Iteration   2: 3357.066 us/op
+# Warmup Iteration   3: 3489.236 us/op
+Iteration   1: 3370.597 us/op
+Iteration   2: 3245.988 us/op
+Iteration   3: 3172.484 us/op
+Iteration   4: 3120.869 us/op
+Iteration   5: 3228.131 us/op
+
+# Run progress: 46.67% complete, ETA 00:21:27
+# Fork: 3 of 3
+# Warmup Iteration   1: 3527.615 us/op
+# Warmup Iteration   2: 3596.913 us/op
+# Warmup Iteration   3: 3525.382 us/op
+Iteration   1: 4597.945 us/op
+Iteration   2: 3281.344 us/op
+Iteration   3: 3215.073 us/op
+Iteration   4: 3384.989 us/op
+Iteration   5: 3373.151 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_new_arraylist":
+  3379.189 ±(99.9%) 376.885 us/op [Average]
+  (min, avg, max) = (3120.869, 3379.189, 4597.945), stdev = 352.538
+  CI (99.9%): [3002.305, 3756.074] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat
+# Parameters: (count = 50)
+
+# Run progress: 50.00% complete, ETA 00:20:06
+# Fork: 1 of 3
+# Warmup Iteration   1: 21.372 us/op
+# Warmup Iteration   2: 18.258 us/op
+# Warmup Iteration   3: 18.145 us/op
+Iteration   1: 17.932 us/op
+Iteration   2: 17.858 us/op
+Iteration   3: 17.835 us/op
+Iteration   4: 17.849 us/op
+Iteration   5: 17.980 us/op
+
+# Run progress: 53.33% complete, ETA 00:18:46
+# Fork: 2 of 3
+# Warmup Iteration   1: 18.568 us/op
+# Warmup Iteration   2: 17.996 us/op
+# Warmup Iteration   3: 18.235 us/op
+Iteration   1: 18.363 us/op
+Iteration   2: 18.256 us/op
+Iteration   3: 21.293 us/op
+Iteration   4: 24.430 us/op
+Iteration   5: 22.710 us/op
+
+# Run progress: 56.67% complete, ETA 00:17:25
+# Fork: 3 of 3
+# Warmup Iteration   1: 17.196 us/op
+# Warmup Iteration   2: 14.924 us/op
+# Warmup Iteration   3: 12.950 us/op
+Iteration   1: 12.652 us/op
+Iteration   2: 13.054 us/op
+Iteration   3: 14.655 us/op
+Iteration   4: 17.099 us/op
+Iteration   5: 13.463 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat":
+  17.695 ±(99.9%) 3.601 us/op [Average]
+  (min, avg, max) = (12.652, 17.695, 24.430), stdev = 3.369
+  CI (99.9%): [14.094, 21.297] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat
+# Parameters: (count = 100)
+
+# Run progress: 60.00% complete, ETA 00:16:05
+# Fork: 1 of 3
+# Warmup Iteration   1: 41.296 us/op
+# Warmup Iteration   2: 45.804 us/op
+# Warmup Iteration   3: 38.158 us/op
+Iteration   1: 37.008 us/op
+Iteration   2: 44.201 us/op
+Iteration   3: 43.711 us/op
+Iteration   4: 40.516 us/op
+Iteration   5: 52.207 us/op
+
+# Run progress: 63.33% complete, ETA 00:14:45
+# Fork: 2 of 3
+# Warmup Iteration   1: 27.166 us/op
+# Warmup Iteration   2: 29.249 us/op
+# Warmup Iteration   3: 27.935 us/op
+Iteration   1: 25.977 us/op
+Iteration   2: 25.890 us/op
+Iteration   3: 27.163 us/op
+Iteration   4: 26.145 us/op
+Iteration   5: 25.978 us/op
+
+# Run progress: 66.67% complete, ETA 00:13:24
+# Fork: 3 of 3
+# Warmup Iteration   1: 39.535 us/op
+# Warmup Iteration   2: 37.160 us/op
+# Warmup Iteration   3: 37.588 us/op
+Iteration   1: 38.119 us/op
+Iteration   2: 70.984 us/op
+Iteration   3: 40.744 us/op
+Iteration   4: 38.645 us/op
+Iteration   5: 41.092 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat":
+  38.559 ±(99.9%) 13.014 us/op [Average]
+  (min, avg, max) = (25.890, 38.559, 70.984), stdev = 12.174
+  CI (99.9%): [25.545, 51.573] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat
+# Parameters: (count = 1000)
+
+# Run progress: 70.00% complete, ETA 00:12:04
+# Fork: 1 of 3
+# Warmup Iteration   1: 394.314 us/op
+# Warmup Iteration   2: 387.888 us/op
+# Warmup Iteration   3: 393.214 us/op
+Iteration   1: 389.584 us/op
+Iteration   2: 410.255 us/op
+Iteration   3: 403.613 us/op
+Iteration   4: 402.492 us/op
+Iteration   5: 401.133 us/op
+
+# Run progress: 73.33% complete, ETA 00:10:43
+# Fork: 2 of 3
+# Warmup Iteration   1: 389.136 us/op
+# Warmup Iteration   2: 388.213 us/op
+# Warmup Iteration   3: 575.981 us/op
+Iteration   1: 560.726 us/op
+Iteration   2: 526.313 us/op
+Iteration   3: 725.889 us/op
+Iteration   4: 467.101 us/op
+Iteration   5: 386.030 us/op
+
+# Run progress: 76.67% complete, ETA 00:09:23
+# Fork: 3 of 3
+# Warmup Iteration   1: 438.270 us/op
+# Warmup Iteration   2: 460.032 us/op
+# Warmup Iteration   3: 415.367 us/op
+Iteration   1: 456.318 us/op
+Iteration   2: 432.058 us/op
+Iteration   3: 413.830 us/op
+Iteration   4: 430.879 us/op
+Iteration   5: 465.739 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat":
+  458.131 ±(99.9%) 95.578 us/op [Average]
+  (min, avg, max) = (386.030, 458.131, 725.889), stdev = 89.403
+  CI (99.9%): [362.553, 553.708] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat
+# Parameters: (count = 2000)
+
+# Run progress: 80.00% complete, ETA 00:08:02
+# Fork: 1 of 3
+# Warmup Iteration   1: 803.376 us/op
+# Warmup Iteration   2: 905.965 us/op
+# Warmup Iteration   3: 758.993 us/op
+Iteration   1: 771.075 us/op
+Iteration   2: 915.860 us/op
+Iteration   3: 864.411 us/op
+Iteration   4: 1350.455 us/op
+Iteration   5: 1008.653 us/op
+
+# Run progress: 83.33% complete, ETA 00:06:42
+# Fork: 2 of 3
+# Warmup Iteration   1: 830.316 us/op
+# Warmup Iteration   2: 777.078 us/op
+# Warmup Iteration   3: 772.459 us/op
+Iteration   1: 769.103 us/op
+Iteration   2: 738.174 us/op
+Iteration   3: 724.145 us/op
+Iteration   4: 752.492 us/op
+Iteration   5: 750.635 us/op
+
+# Run progress: 86.67% complete, ETA 00:05:21
+# Fork: 3 of 3
+# Warmup Iteration   1: 776.027 us/op
+# Warmup Iteration   2: 688.039 us/op
+# Warmup Iteration   3: 694.921 us/op
+Iteration   1: 708.701 us/op
+Iteration   2: 699.958 us/op
+Iteration   3: 734.633 us/op
+Iteration   4: 726.431 us/op
+Iteration   5: 712.400 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat":
+  815.142 ±(99.9%) 183.491 us/op [Average]
+  (min, avg, max) = (699.958, 815.142, 1350.455), stdev = 171.638
+  CI (99.9%): [631.650, 998.633] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.5, OpenJDK 64-Bit Server VM, 11.0.5+10
+# VM invoker: /Users/khmarbaise/tools/jdk-11.0.5+10/Contents/Home/bin/java
+# VM options: <none>
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat
+# Parameters: (count = 5000)
+
+# Run progress: 90.00% complete, ETA 00:04:01
+# Fork: 1 of 3
+# Warmup Iteration   1: 2778.457 us/op
+# Warmup Iteration   2: 2582.432 us/op
+# Warmup Iteration   3: 2435.442 us/op
+Iteration   1: 2465.950 us/op
+Iteration   2: 2498.275 us/op
+Iteration   3: 3380.876 us/op
+Iteration   4: 3207.719 us/op
+Iteration   5: 2686.945 us/op
+
+# Run progress: 93.33% complete, ETA 00:02:40
+# Fork: 2 of 3
+# Warmup Iteration   1: 2764.988 us/op
+# Warmup Iteration   2: 2729.146 us/op
+# Warmup Iteration   3: 2421.735 us/op
+Iteration   1: 2522.666 us/op
+Iteration   2: 2637.556 us/op
+Iteration   3: 2761.441 us/op
+Iteration   4: 2515.289 us/op
+Iteration   5: 2416.342 us/op
+
+# Run progress: 96.67% complete, ETA 00:01:20
+# Fork: 3 of 3
+# Warmup Iteration   1: 2888.727 us/op
+# Warmup Iteration   2: 2723.025 us/op
+# Warmup Iteration   3: 2662.076 us/op
+Iteration   1: 2700.495 us/op
+Iteration   2: 2633.585 us/op
+Iteration   3: 2503.463 us/op
+Iteration   4: 2654.115 us/op
+Iteration   5: 2658.525 us/op
+
+
+Result "com.soebes.performance.streams.BenchmarkStreamConcat.with_stream_concat":
+  2682.883 ±(99.9%) 287.596 us/op [Average]
+  (min, avg, max) = (2416.342, 2682.883, 3380.876), stdev = 269.017
+  CI (99.9%): [2395.287, 2970.478] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:40:13
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                 (count)  Mode  Cnt     Score     Error  Units
+BenchmarkStreamConcat.with_new_arraylist       50  avgt   15    21.759 ±   0.797  us/op
+BenchmarkStreamConcat.with_new_arraylist      100  avgt   15    43.309 ±   1.449  us/op
+BenchmarkStreamConcat.with_new_arraylist     1000  avgt   15   498.693 ± 103.550  us/op
+BenchmarkStreamConcat.with_new_arraylist     2000  avgt   15   988.483 ±  80.574  us/op
+BenchmarkStreamConcat.with_new_arraylist     5000  avgt   15  3379.189 ± 376.885  us/op
+BenchmarkStreamConcat.with_stream_concat       50  avgt   15    17.695 ±   3.601  us/op
+BenchmarkStreamConcat.with_stream_concat      100  avgt   15    38.559 ±  13.014  us/op
+BenchmarkStreamConcat.with_stream_concat     1000  avgt   15   458.131 ±  95.578  us/op
+BenchmarkStreamConcat.with_stream_concat     2000  avgt   15   815.142 ± 183.491  us/op
+BenchmarkStreamConcat.with_stream_concat     5000  avgt   15  2682.883 ± 287.596  us/op
+
+
