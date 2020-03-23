@@ -18,7 +18,7 @@ public class BenchmarkStreamConcat {
 
 
   @Benchmark
-  public List<Element> with_new_arraylist(Container content) throws InterruptedException {
+  public List<Element> with_new_arraylist(Container content) {
     return content.getFancyStuffs().stream().flatMap(item -> {
       ArrayList<Element> objects = new ArrayList<>();
       objects.add(item.getElement());
@@ -34,7 +34,6 @@ public class BenchmarkStreamConcat {
       .stream()
       .flatMap(fs -> Stream.concat(Stream.of(fs.getElement()), fs.getElements().stream()))
       .collect(Collectors.toList());
-
   }
 
   @State(Scope.Thread)
@@ -45,8 +44,10 @@ public class BenchmarkStreamConcat {
       this.fancyStuffs = Collections.emptyList();
     }
 
-    @Param({"50", "100", "1000", "2000", "5000"})
+    @Param({"50", "100"})
     int count;
+    @Param({"50", "100", "200", "500", "1000"})
+    int elementCount;
 
     @Setup(Level.Trial)
     public void setup() {
@@ -61,7 +62,7 @@ public class BenchmarkStreamConcat {
     }
 
     private List<Element> createList(int factor) {
-      return IntStream.rangeClosed(2, 50)
+      return IntStream.rangeClosed(2, elementCount)
         .mapToObj(i -> new Element(i * factor))
         .collect(Collectors.toList());
     }
