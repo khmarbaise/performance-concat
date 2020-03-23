@@ -18,6 +18,25 @@ public class BenchmarkStreamConcat {
 
 
   @Benchmark
+  public List<Element> with_new_arraylist_constructor(Container content) {
+    return content.getFancyStuffs().stream().flatMap(item -> {
+      ArrayList<Element> objects = new ArrayList<>(item.getElements());
+      objects.add(item.getElement());
+      return objects.stream();
+    }).collect(Collectors.toList());
+  }
+
+  @Benchmark
+  public List<Element> with_new_arraylist_constructor_size(Container content) {
+    return content.getFancyStuffs().stream().flatMap(item -> {
+      ArrayList<Element> objects = new ArrayList<>(item.getElements().size() + 1);
+      objects.add(item.getElement());
+      objects.addAll(item.getElements());
+      return objects.stream();
+    }).collect(Collectors.toList());
+  }
+
+  @Benchmark
   public List<Element> with_new_arraylist(Container content) {
     return content.getFancyStuffs().stream().flatMap(item -> {
       ArrayList<Element> objects = new ArrayList<>();
@@ -25,7 +44,6 @@ public class BenchmarkStreamConcat {
       objects.addAll(item.getElements());
       return objects.stream();
     }).collect(Collectors.toList());
-
   }
 
   @Benchmark
@@ -38,16 +56,17 @@ public class BenchmarkStreamConcat {
 
   @State(Scope.Thread)
   public static class Container {
+    @Param({"10", "20", "50", "100", "200", "500", "1000"})
+    int count;
+
+    @Param({"10", "20", "50", "100", "200", "500", "1000"})
+    int elementCount;
+
     private List<FancyStuff> fancyStuffs;
 
     public Container() {
       this.fancyStuffs = Collections.emptyList();
     }
-
-    @Param({"50", "100"})
-    int count;
-    @Param({"50", "100", "200", "500", "1000"})
-    int elementCount;
 
     @Setup(Level.Trial)
     public void setup() {
