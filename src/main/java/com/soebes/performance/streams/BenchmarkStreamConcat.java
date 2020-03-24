@@ -13,7 +13,6 @@ import java.util.stream.Stream;
 
 @BenchmarkMode(Mode.All)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-
 public class BenchmarkStreamConcat {
 
 

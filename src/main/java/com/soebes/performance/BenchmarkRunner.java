@@ -20,8 +20,8 @@ public class BenchmarkRunner {
         new OptionsBuilder()
             .forks(3)
             .warmupIterations(3)
-            .mode(Mode.AverageTime)
-            .timeUnit(TimeUnit.MICROSECONDS)
+            .mode(Mode.All)
+            .timeUnit(TimeUnit.NANOSECONDS)
             .resultFormat(ResultFormatType.TEXT)
             .include(BenchmarkStreamConcat.class.getName())
             .build();
