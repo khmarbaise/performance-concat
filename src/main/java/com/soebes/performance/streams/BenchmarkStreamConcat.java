@@ -16,24 +16,24 @@ import java.util.stream.Stream;
 public class BenchmarkStreamConcat {
 
 
-  @Benchmark
-  public List<Element> with_new_arraylist_constructor(Container content) {
-    return content.getFancyStuffs().stream().flatMap(item -> {
-      ArrayList<Element> objects = new ArrayList<>(item.getElements());
-      objects.add(item.getElement());
-      return objects.stream();
-    }).collect(Collectors.toList());
-  }
+//  @Benchmark
+//  public List<Element> with_new_arraylist_constructor(Container content) {
+//    return content.getFancyStuffs().stream().flatMap(item -> {
+//      ArrayList<Element> objects = new ArrayList<>(item.getElements());
+//      objects.add(item.getElement());
+//      return objects.stream();
+//    }).collect(Collectors.toList());
+//  }
 
-  @Benchmark
-  public List<Element> with_new_arraylist_constructor_size(Container content) {
-    return content.getFancyStuffs().stream().flatMap(item -> {
-      ArrayList<Element> objects = new ArrayList<>(item.getElements().size() + 1);
-      objects.add(item.getElement());
-      objects.addAll(item.getElements());
-      return objects.stream();
-    }).collect(Collectors.toList());
-  }
+//  @Benchmark
+//  public List<Element> with_new_arraylist_constructor_size(Container content) {
+//    return content.getFancyStuffs().stream().flatMap(item -> {
+//      ArrayList<Element> objects = new ArrayList<>(item.getElements().size() + 1);
+//      objects.add(item.getElement());
+//      objects.addAll(item.getElements());
+//      return objects.stream();
+//    }).collect(Collectors.toList());
+//  }
 
   @Benchmark
   public List<Element> with_new_arraylist(Container content) {

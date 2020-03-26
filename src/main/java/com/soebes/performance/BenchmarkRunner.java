@@ -14,16 +14,16 @@ import java.util.concurrent.TimeUnit;
 public class BenchmarkRunner {
 
   public static void main(String[] args)
-      throws RunnerException, IOException {
+      throws RunnerException {
 
     Options opt =
         new OptionsBuilder()
             .forks(3)
             .warmupIterations(3)
-            .mode(Mode.All)
+            .mode(Mode.AverageTime)
             .timeUnit(TimeUnit.NANOSECONDS)
-            .resultFormat(ResultFormatType.TEXT)
             .include(BenchmarkStreamConcat.class.getName())
+            .resultFormat(ResultFormatType.JSON)
             .build();
 
     new Runner(opt).run();
